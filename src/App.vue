@@ -1,33 +1,55 @@
-<script setup></script>
 <template>
-  <header></header>
+  <LoginHeader />
+  <div class="login-wrapper">
+    <Login />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script setup>
+import LoginHeader from './components/layout/LoginHeader.vue'
+import Login from './components/login/Login.vue'
+</script>
+
+
+
+<style>
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  padding: 20px;
+  margin-top: 80px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./src/assets/images/LoginBackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: block !important;
+  place-items: normal !important;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+#app {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+  max-width: none !important;
+  grid-template-columns: none !important;
 }
 </style>
