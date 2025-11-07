@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-import LoginHeader from './components/layout/LoginHeader.vue'
-import Login from './components/login/Login.vue'
+import LoginHeader from '@/components/layout/LoginHeader.vue'
+import Login from '@/components/login/Login.vue'
 </script>
 
 
@@ -33,7 +33,7 @@ import Login from './components/login/Login.vue'
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./src/assets/images/LoginBackground.png');
+  background-image: url('@/assets/images/LoginBackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
